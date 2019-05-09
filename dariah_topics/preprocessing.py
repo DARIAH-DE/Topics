@@ -729,7 +729,7 @@ def _create_large_corpus_model(tokenized_corpus, document_labels):
 
     for document_id in range(1, len(multi_index.levels[0]) + 1):
         for type_id in [val[1] for val in index_iterator[document_id]]:
-            document_term_matrix.set_value((document_id, type_id), 0, int(bag_of_words[document_id][type_id]))
+            document_term_matrix.at[(document_id, type_id), 0] = int(bag_of_words[document_id][type_id])
     return document_term_matrix, document_ids, type_ids
 
 

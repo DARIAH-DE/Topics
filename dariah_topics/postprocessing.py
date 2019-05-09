@@ -228,7 +228,7 @@ def show_document_topics(topics, model=None, document_labels=None, doc_topics_fi
     
     Args:
         topics (pandas.DataFrame, optional): Only for lda models. A pandas DataFrame
-            containing all topics.
+            containing all topics. Produced by visualization.show_topics()
         model (optional): lda or Gensim model.
         document_labels (list, optional): An list of all document labels.
         doc_topics_file (str, optional): Only for MALLET. Path to the doc-topics file.
@@ -239,7 +239,7 @@ def show_document_topics(topics, model=None, document_labels=None, doc_topics_fi
     
     Returns:
         A pandas DataFrame with rows corresponding to topics and columns corresponding
-            to keys.
+            to documents.
 
     Example:
     """
@@ -490,7 +490,7 @@ def _show_mallet_document_topics(doc_topics_file, index, easy_file_format):
     Args:
         outfolder (str): Folder for MALLET output.
         doc_topics (str): Name of MALLET's doc_topic file. Defaults to 'doc_topics.txt'.
-        topic_keys (str): Name of MALLET's topic_keys file. Defaults to 'topic_keys.txt'.
+        index (list): array-like topic labels
 
     ToDo: Prettify docnames
     

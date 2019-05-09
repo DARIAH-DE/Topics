@@ -40,3 +40,10 @@ def jupyter_MALLET_test():
 
 def jupyter_Visualizations_test():
     run_notebook("Visualizations.ipynb")
+	
+def jupyter_DKPro_test():
+	path = Path('/opt/ddw-0.4.6/ddw-0.4.6.jar')
+	if not path.exists():
+		raise SkipTest("Could not find DKProWrapper. Integration test for DKPro Notebook is skipped.")
+	else:
+		run_notebook("IntroducingLda_DKProWrapper.ipynb")

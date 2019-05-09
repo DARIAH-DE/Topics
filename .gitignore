@@ -24,9 +24,6 @@ gb_all_model.lda.state.sstats.npy
 gensim_txt_gb.mm
 gensim_gb_txt.mm
 corpus.mm
-demonstrator/dariah_topics/
-demonstrator/node_modules/
-demonstrator/static/*.pngcover
 .idea
 Topics.iml
 _build

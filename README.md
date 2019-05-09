@@ -34,18 +34,23 @@ In only 15 lines of code from plain text files to a visualization of the topic m
 
 ```python
 >>> from cophi_toolbox import preprocessing
->>> from dariah_topics import modeling, postprocessing, visualization
->>> pathlist = ['corpus/dickens_bleak.txt', 'corpus/thackeray_vanity.txt']
->>> labels = ['dickens_bleak', 'thackeray_vanity']
+>>> from dariah_topics import postprocessing, visualization
+>>> import lda
+>>> import glob
+>>> import os
+>>> pathlist = glob.glob("notebooks/data/british-fiction-corpus/*.txt")
+>>> labels = [os.path.basename(path) for path in pathlist]
 >>> corpus = preprocessing.read_files(pathlist)
 >>> tokens = [preprocessing.tokenize(document) for document in corpus]
 >>> matrix = preprocessing.create_document_term_matrix(tokens, labels)
 >>> stopwords = preprocessing.list_mfw(matrix)
 >>> clean_matrix = preprocessing.remove_features(stopwords, matrix)
 >>> vocabulary = clean_matrix.columns
->>> model = modeling.lda(topics=10, iterations=1000, implementation='mallet')
+>>> clean_matrix_array = clean_matrix.values.astype(int)
+>>> model = lda.LDA(n_topics=10, n_iter=1000)
+>>> model.fit(clean_matrix_array)
 >>> topics = postprocessing.show_topics(model, vocabulary)
->>> document_topics = postprocessing.show_document_topics(model, topics, labels)
+>>> document_topics = postprocessing.show_document_topics(topics, model, labels)
 >>> PlotDocumentTopics = visualization.PlotDocumentTopics(document_topics)
 >>> PlotDocumentTopics.static_heatmap().show()
 ```
