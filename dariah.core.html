@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>dariah.core package &#8212; DARIAH Topics 2.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dariah-core-package">
+<h1>dariah.core package<a class="headerlink" href="#dariah-core-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dariah.core.modeling">
+<span id="dariah-core-modeling-module"></span><h2>dariah.core.modeling module<a class="headerlink" href="#module-dariah.core.modeling" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dariah-topics-modeling">
+<h3>dariah.topics.modeling<a class="headerlink" href="#dariah-topics-modeling" title="Permalink to this headline">¶</a></h3>
+<p>This module implements low-level LDA modeling functions.</p>
+<dl class="class">
+<dt id="dariah.core.modeling.LDA">
+<em class="property">class </em><code class="descclassname">dariah.core.modeling.</code><code class="descname">LDA</code><span class="sig-paren">(</span><em>num_topics</em>, <em>num_iterations=1000</em>, <em>alpha=0.1</em>, <em>eta=0.01</em>, <em>random_state=None</em>, <em>mallet=None</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.modeling.LDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="dariah.core.modeling.LDA.document_similarities">
+<code class="descname">document_similarities</code><a class="headerlink" href="#dariah.core.modeling.LDA.document_similarities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Document similarity matrix.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="dariah.core.modeling.LDA.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>dtm</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.modeling.LDA.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit the LDA model.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dariah.core.modeling.LDA.topic_document">
+<code class="descname">topic_document</code><a class="headerlink" href="#dariah.core.modeling.LDA.topic_document" title="Permalink to this definition">¶</a></dt>
+<dd><p>Topic-document distributions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dariah.core.modeling.LDA.topic_similarities">
+<code class="descname">topic_similarities</code><a class="headerlink" href="#dariah.core.modeling.LDA.topic_similarities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Topic similarity matrix.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dariah.core.modeling.LDA.topic_word">
+<code class="descname">topic_word</code><a class="headerlink" href="#dariah.core.modeling.LDA.topic_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Topic-word distributions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="dariah.core.modeling.LDA.topics">
+<code class="descname">topics</code><a class="headerlink" href="#dariah.core.modeling.LDA.topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Topics with 200 top words.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-dariah.core.utils">
+<span id="dariah-core-utils-module"></span><h2>dariah.core.utils module<a class="headerlink" href="#module-dariah.core.utils" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dariah-topics-utils">
+<h3>dariah.topics.utils<a class="headerlink" href="#dariah-topics-utils" title="Permalink to this headline">¶</a></h3>
+<p>This module implements helper functions for topic modeling.</p>
+<dl class="function">
+<dt id="dariah.core.utils.read_topics_file">
+<code class="descclassname">dariah.core.utils.</code><code class="descname">read_topics_file</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.utils.read_topics_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read a MALLET topics file.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-dariah.core.visualization">
+<span id="dariah-core-visualization-module"></span><h2>dariah.core.visualization module<a class="headerlink" href="#module-dariah.core.visualization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dariah-topics-visualization">
+<h3>dariah.topics.visualization<a class="headerlink" href="#dariah-topics-visualization" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="dariah.core.visualization.Vis">
+<em class="property">class </em><code class="descclassname">dariah.core.visualization.</code><code class="descname">Vis</code><span class="sig-paren">(</span><em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="dariah.core.visualization.Vis.document">
+<code class="descname">document</code><span class="sig-paren">(</span><em>name</em>, <em>color='grey'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis.document" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dariah.core.visualization.Vis.document_similarities">
+<code class="descname">document_similarities</code><span class="sig-paren">(</span><em>cmap='Blues'</em>, <em>annot=False</em>, <em>fmt='.2g'</em>, <em>cbar=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis.document_similarities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dariah.core.visualization.Vis.topic">
+<code class="descname">topic</code><span class="sig-paren">(</span><em>name</em>, <em>num_words=10</em>, <em>color='grey'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis.topic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dariah.core.visualization.Vis.topic_document">
+<code class="descname">topic_document</code><span class="sig-paren">(</span><em>cmap='Blues'</em>, <em>annot=False</em>, <em>fmt='.2g'</em>, <em>cbar=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis.topic_document" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dariah.core.visualization.Vis.topic_similarities">
+<code class="descname">topic_similarities</code><span class="sig-paren">(</span><em>cmap='Blues'</em>, <em>annot=False</em>, <em>fmt='.2g'</em>, <em>cbar=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis.topic_similarities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="dariah.core.visualization.Vis.topic_word">
+<code class="descname">topic_word</code><span class="sig-paren">(</span><em>words</em>, <em>cmap='Blues'</em>, <em>annot=False</em>, <em>fmt='.2g'</em>, <em>cbar=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.core.visualization.Vis.topic_word" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-dariah.core">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dariah.core" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><a href="https://dariah-de/Topics">
+  <img src="https://raw.githubusercontent.com/DARIAH-DE/Topics/testing/docs/images/dariah-flower.png">
+</a>
+<h1 style="margin-bottom: 50px;">DARIAH Topics</h1>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017–2019, DARIAH-DE.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dariah.core.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

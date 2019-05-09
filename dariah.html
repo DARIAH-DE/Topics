@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>dariah package &#8212; DARIAH Topics 2.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dariah-package">
+<h1>dariah package<a class="headerlink" href="#dariah-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dariah.core.html">dariah.core package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dariah.core.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.core.html#module-dariah.core.modeling">dariah.core.modeling module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dariah.core.html#dariah-topics-modeling">dariah.topics.modeling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.core.html#module-dariah.core.utils">dariah.core.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dariah.core.html#dariah-topics-utils">dariah.topics.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.core.html#module-dariah.core.visualization">dariah.core.visualization module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dariah.core.html#dariah-topics-visualization">dariah.topics.visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.core.html#module-dariah.core">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dariah.mallet.html">dariah.mallet package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dariah.mallet.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.mallet.html#module-dariah.mallet.api">dariah.mallet.api module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dariah.mallet.html#dariah-mallet-api">dariah.mallet.api</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.mallet.html#module-dariah.mallet.core">dariah.mallet.core module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dariah.mallet.html#dariah-mallet-core">dariah.mallet.core</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.mallet.html#module-dariah.mallet.utils">dariah.mallet.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dariah.mallet.html#dariah-utils">dariah.utils</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dariah.mallet.html#module-dariah.mallet">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dariah.api">
+<span id="dariah-api-module"></span><h2>dariah.api module<a class="headerlink" href="#module-dariah.api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dariah-api">
+<h3>dariah.api<a class="headerlink" href="#dariah-api" title="Permalink to this headline">¶</a></h3>
+<p>This module implements the high-level API.</p>
+<dl class="function">
+<dt id="dariah.api.topics">
+<code class="descclassname">dariah.api.</code><code class="descname">topics</code><span class="sig-paren">(</span><em>directory</em>, <em>stopwords</em>, <em>num_topics</em>, <em>num_iterations</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#dariah.api.topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Train a topic model.</p>
+<dl>
+<dt>Parameters:</dt><dd><p>directory (str): Path to corpus directory.
+stopwords (int, list): Either a threshold for most frequent words,</p>
+<blockquote>
+<div><p>or a list of stopwords.</p>
+</div></blockquote>
+<p>num_topics (int): Number of topics.
+num_iterations (int): Number of iterations.
+alpha (float): TODO. Defaults to 0.1.
+eta (float): TODO. Defaults to 0.01.
+random_state (int): TODO. Defaults to None.
+mallet (str): TODO. Defaults to None.</p>
+</dd>
+<dt>Returns:</dt><dd><p>A topic model and its visualizations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-dariah">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dariah" title="Permalink to this headline">¶</a></h2>
+<p>This is a library for topic modeling and visualization.</p>
+<p>Using the high-level API is easy:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+&gt;&gt;&gt; model, vis = dariah.topics(directory=”corpus”,</p>
+<blockquote>
+<div><p>stopwords=100,
+num_topics=10,
+num_iterations=1000)</p>
+</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><a href="https://dariah-de/Topics">
+  <img src="https://raw.githubusercontent.com/DARIAH-DE/Topics/testing/docs/images/dariah-flower.png">
+</a>
+<h1 style="margin-bottom: 50px;">DARIAH Topics</h1>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017–2019, DARIAH-DE.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dariah.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
