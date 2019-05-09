@@ -32,3 +32,8 @@ IntroducingGensim.html
 .cache
 htmlcov
 tests.xml
+.pytest_cache/*
+*.vectors
+*.log
+notebooks/ddw-0.4.6.jar
+notebooks/configs/*
