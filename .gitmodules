@@ -1,3 +1,0 @@
-[submodule "notebooks/data/british-fiction-corpus"]
-	path = notebooks/data/british-fiction-corpus
-	url = https://github.com/cophi-wue/british-fiction-corpus

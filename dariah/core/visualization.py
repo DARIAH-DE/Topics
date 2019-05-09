@@ -2,7 +2,9 @@
 dariah.topics.visualization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
+import matplotlib
 
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
