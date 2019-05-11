@@ -21,10 +21,21 @@ Example
 -------
 
 >>> import dariah
->>> dariah.topics(directory="british-fiction-corpus",
-...               stopwords=100,
-...               num_topics=10,
-...               num_iterations=1000)
+>>> model, vis = dariah.topics(directory="british-fiction-corpus",
+...                            stopwords=100,
+...                            num_topics=10,
+...                            num_iterations=1000)
+>>> model.topics.iloc[:5, :5]
+          word0   word1    word2    word3     word4
+topic0  phineas    lord    laura   course     house
+topic1    don't  mother     came       go    looked
+topic2    jones   adams       am   indeed  answered
+topic3      tom    adam   maggie     it's  tulliver
+topic4  crawley  george  osborne  rebecca    amelia
+
+With the ``vis`` object, you can visualize the model’s probability distributions, e.g. with ``vis.topic_document()``:
+
+.. image:: https://raw.githubusercontent.com/DARIAH-DE/Topics/testing/docs/images/topic-document.png
 
 
 Developing
