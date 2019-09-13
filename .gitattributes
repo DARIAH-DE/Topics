@@ -41,7 +41,7 @@
 *.pyw 		text
 *.pyx  		text
 
-notebooks/*
+notebooks/* linguist-vendored
 
 # Binary files
 # ============
