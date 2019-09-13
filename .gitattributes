@@ -41,7 +41,7 @@
 *.pyw 		text
 *.pyx  		text
 
-*.ipynb
+notebooks/*
 
 # Binary files
 # ============
