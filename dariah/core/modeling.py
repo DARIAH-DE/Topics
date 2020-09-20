@@ -218,6 +218,7 @@ class LDA:
         self._topic_document_file = Path(self._tempdir, "topic-document.txt")
         self._topic_word_file = Path(self._tempdir, "topic-word.txt")
         self._topics_file = Path(self._tempdir, "topics.txt")
+        self._word_topic_counts_file = Path(self._tempdir, "word-topic-counts-file.txt")
 
         # Train topics:
         mallet.train_topics(
@@ -227,6 +228,7 @@ class LDA:
             output_doc_topics=self._topic_document_file,
             output_topic_keys=self._topics_file,
             topic_word_weights_file=self._topic_word_file,
+            word_topic_counts_file=self._word_topic_counts_file,
             alpha=self.alpha,
             beta=self.eta,
             num_top_words=200,
